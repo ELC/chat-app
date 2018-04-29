@@ -1,0 +1,23 @@
+<h1>
+  Chat App<small> - Built with Angular</small>
+</h1>
+
+<div name="chat-box" class="chat-box" #chatbox>
+  <table *ngIf="items.length !== 0" class="inner-chat-box" >
+    <tr>
+      <th class="short column-id"></th>
+      <th></th>
+      <th class="short"></th>
+    </tr>
+    <tr *ngFor="let item of items" [class.checked]='item.finished'>
+      <td class="column-id">{{item.user}}</td>
+      <td>{{item.name}}</td>
+      <td class="short">{{item.time}}</td>
+    </tr>
+  </table>
+</div>
+
+<div class="input-container">
+  <input name="nextTask" (keyup.enter)="addNew()" [(ngModel)]="inputValue">
+  <button class="addButton" (click)="addNew()"><i class="fa fa-send"></i></button>
+</div>
