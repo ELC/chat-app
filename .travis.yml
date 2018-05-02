@@ -18,5 +18,6 @@ install:
   - npm install
 
 script:
+  - npm run download-template
   - npm run build
   - npm run deploy
