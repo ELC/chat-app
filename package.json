@@ -5,6 +5,7 @@
   "scripts": {
     "build": "ng build --prod",
     "deploy": "netlify deploy -t $NETLIFY_TOKEN -p dist -s $NETLIFY_PRODUCTION_APP",
+    "download-template": "git clone -b master https://github.com/ELC/angular-template.git template && mv -v template/* src/",
     "ng": "ng",
     "start": "ng serve",
     "test-headless": "ng test && ng e2e",
